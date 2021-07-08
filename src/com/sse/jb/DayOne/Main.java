@@ -16,7 +16,7 @@ public class Main {
         // Assignment 2
         DayOneAssignment2 game = new DayOneAssignment2();
         game.letsPlayAGame();
-        
+
 
     }
 
