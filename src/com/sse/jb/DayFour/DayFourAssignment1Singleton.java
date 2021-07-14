@@ -1,21 +1,21 @@
 package com.sse.jb.DayFour;
 
-public class DayFourAssignment1 {
+public class DayFourAssignment1Singleton {
 
-    volatile private static DayFourAssignment1 singleton = null;
+    volatile private static DayFourAssignment1Singleton singleton = null;
 
-    private DayFourAssignment1() {
+    private DayFourAssignment1Singleton() {
 
     }
 
-    public DayFourAssignment1 getSingleton() {
+    public DayFourAssignment1Singleton getSingleton() {
         // check 1
         if (singleton == null) {
             // lock
             synchronized (singleton) {
                 //check 2
                 if (singleton == null) {
-                    singleton = new DayFourAssignment1();
+                    singleton = new DayFourAssignment1Singleton();
                 }
             }
         }

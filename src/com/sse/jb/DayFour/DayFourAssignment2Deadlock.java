@@ -1,6 +1,6 @@
 package com.sse.jb.DayFour;
 
-public class DayFourAssignment2 {
+public class DayFourAssignment2Deadlock {
     public static void main(String[] args) {
         String resource1 = "resource one";
         String resource2 = "resource two";
