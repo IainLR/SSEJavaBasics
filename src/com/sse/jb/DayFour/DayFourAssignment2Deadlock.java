@@ -10,9 +10,11 @@ public class DayFourAssignment2Deadlock {
             public void run() {
                 try {
                     synchronized (resource1) {
+                        System.out.println("Thread one activated with resource 1");
                         Thread.sleep(100);
                         synchronized (resource2) {
-                            System.out.println("Thread one activated");
+                            // this will not be reached
+                            System.out.println("Thread one activated with resource 2");
                         }
                     }
                 } catch (Exception e) {
@@ -27,9 +29,10 @@ public class DayFourAssignment2Deadlock {
             public void run() {
                 try {
                     synchronized (resource2) {
+                        System.out.println("Thread two activated with resource 2");
                         Thread.sleep(100);
                         synchronized (resource1) {
-                            System.out.println("thread two activated");
+                            System.out.println("thread two activated again");
                         }
                     }
                 } catch (Exception e){
